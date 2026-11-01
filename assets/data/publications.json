@@ -1,0 +1,119 @@
+[
+  {
+    "selected": true,
+    "details": {
+      "title": "RSMA-Enabled Stacked Intelligent Metasurface-Assisted Downlink ISAC",
+      "authors": [
+        { "name": "J. Ahmad",     "href": "" },
+        { "name": "M. H. Nawaz",  "href": "", "strong": true },
+        { "name": "Y. H. Kim",    "href": "https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" }
+      ],
+      "venue": "IEEE GLOBECOM'26",
+      "place": "Macau, China",
+      "status": "accepted",
+      "links": []
+    }
+  },
+  {
+    "selected": true,
+    "details": {
+      "title": "Max–Min Fairness Design for Stacked Intelligent Metasurface-Assisted RSMA-ISAC Systems",
+      "authors": [
+        { "name": "M. H. Nawaz",  "href": "", "strong": true },
+        { "name": "J. Ahmad",     "href": "" },
+        { "name": "M. A. Khan",   "href": "" },
+        { "name": "Y. H. Kim",    "href": "https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" }
+      ],
+      "venue": "IEEE ICTC'26",
+      "place": "Jeju Island, Korea",
+      "status": "accepted",
+      "links": []
+    }
+  },
+  {
+    "selected": true,
+    "details": {
+      "title": "Uncertainty-Weighted Experience Replay for Continual MIMO Channel Prediction",
+      "authors": [
+        { "name": "M. J. Qamar",   "href": "" },
+        { "name": "M. H. Nawaz",   "href": "", "strong": true },
+        { "name": "M. A. Ouameur", "href": "" },
+        { "name": "A. Mohsin",     "href": "" },
+        { "name": "M. Bagaa",      "href": "" }
+      ],
+      "venue": "IEEE ICC'26",
+      "place": "Glasgow, UK",
+      "status": "accepted",
+      "links": [
+        { "label": "arXiv", "href": "https://arxiv.org/abs/2604.13038" }
+      ]
+    }
+  },
+  {
+    "selected": true,
+    "details": {
+      "title": "Active STAR-RIS Empowered ISAC with RSMA Under Nonlinear Amplification",
+      "authors": [
+        { "name": "N. Khan",      "href": "" },
+        { "name": "M. H. Nawaz",  "href": "", "strong": true },
+        { "name": "J. Ahmad",     "href": "" },
+        { "name": "Y. H. Kim",    "href": "https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" }
+      ],
+      "venue": "IEEE Trans. Veh. Technol.",
+      "status": "submitted",
+      "links": []
+    }
+  },
+  {
+    "selected": false,
+    "details": {
+      "title": "Generative AI for Ambient Intelligence",
+      "authors": [
+        { "name": "M. H. Nawaz",    "href": "", "strong": true },
+        { "name": "J. Ahmad",       "href": "" },
+        { "name": "M. A. Mohsin",   "href": "" },
+        { "name": "M. A. Jamshed",  "href": "" }
+      ],
+      "venue": "IET Book Chapter",
+      "status": "accepted",
+      "links": []
+    }
+  },
+  {
+    "selected": false,
+    "details": {
+      "title": "Towards 6G Intelligence: The Role of Generative AI in Future Wireless Networks",
+      "authors": [
+        { "name": "M. A. Mohsin",   "href": "" },
+        { "name": "J. Ahmad",       "href": "" },
+        { "name": "M. H. Nawaz",    "href": "", "strong": true },
+        { "name": "M. A. Jamshed",  "href": "" }
+      ],
+      "venue": "Elsevier Book Chapter",
+      "status": "submitted",
+      "links": [
+        { "label": "arXiv", "href": "https://arxiv.org/abs/2508.19495" }
+      ]
+    }
+  },
+  {
+    "selected": false,
+    "details": {
+      "title": "Real-Time Deep Learning for Lung Disease Classification: A Step Forward",
+      "authors": [
+        { "name": "M. H. Nawaz",  "href": "", "strong": true },
+        { "name": "J. Ahmad",     "href": "" },
+        { "name": "M. Haroon",    "href": "" },
+        { "name": "M. Haseeb",    "href": "" },
+        { "name": "A. Salman",    "href": "https://scholar.google.com/citations?user=jSRGVnoAAAAJ&hl=en" }
+      ],
+      "venue": "FIT'24",
+      "place": "Islamabad, Pakistan",
+      "status": "accepted",
+      "announced": "Dec 2024",
+      "links": [
+        { "label": "IEEE Xplore", "href": "https://ieeexplore.ieee.org/document/10838437" }
+      ]
+    }
+  }
+]

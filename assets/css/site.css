@@ -1,0 +1,1115 @@
+/*
+  site.css
+  Site-specific layout on top of the vendor "main.css" grid/reset (Helios by
+  HTML5 UP). Kept separate so template internals stay untouched: nav bar,
+  section headers, and the Publications / Research Interests / Experience /
+  Education / Awards / Skills components all live here.
+*/
+
+:root {
+    --ink: #2E2D29;
+    --body: #6D6C69;
+    --muted: #9a9892;
+    --accent: #1F7FB4;
+    --accepted: #2E7D46;
+    --submitted: #B8860B;
+    --extra: #B83A4B;
+    --hairline: rgba(0, 0, 0, 0.07);
+    --border: rgba(0, 0, 0, 0.14);
+    --tint: #fafafa;
+    --chip-bg: #f2f1ed;
+    --bg: #fff;
+    --venue-ink: #17618C;
+    --venue-bg: rgba(31, 127, 180, 0.10);
+}
+
+/* ---------- Nav ---------- */
+
+body {
+    padding-top: 3.5em;
+}
+
+#nav {
+    background-color: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--hairline);
+    box-shadow: none;
+    text-align: left;
+    height: 3.5em;
+    line-height: normal;
+}
+
+#nav .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1.5em;
+}
+
+#nav .nav-brand {
+    font-family: "Source Serif 4 Bold", serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 1.05em;
+    letter-spacing: -0.01em;
+    flex: 0 0 auto;
+}
+
+#nav .nav-brand:hover {
+    color: var(--accent) !important;
+}
+
+#nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    min-width: 0;
+}
+
+#nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.15em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+#nav li {
+    padding-left: 0;
+    flex: 0 0 auto;
+}
+
+#nav a {
+    color: var(--body);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.82em;
+    letter-spacing: 0.01em;
+    height: auto;
+    line-height: normal;
+    padding: 0.55em 0.85em;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+#nav a:hover {
+    background: #f2f1ed;
+    color: var(--ink) !important;
+}
+
+#nav a.nav-cv {
+    color: #fff !important;
+    background: var(--ink);
+    font-weight: 700;
+}
+
+#nav a.nav-cv:hover {
+    background: #45443e;
+}
+
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: auto;
+    gap: 0.45em;
+    border: 1px solid var(--hairline);
+    background: transparent;
+    color: var(--body);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.82em;
+    letter-spacing: 0.01em;
+    padding: 0.5em 0.85em;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    -moz-transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+.theme-toggle-btn:hover {
+    background: #f2f1ed;
+    color: var(--ink);
+}
+
+.theme-toggle-icon {
+    font-size: 1em;
+    line-height: 1;
+}
+
+/* The vendor template styles every <button> as a solid blue pill with
+   forced white text (!important) and a text shadow, which made the filter
+   tabs and "Show more" washed out. Reset that for our own buttons. */
+.pub-filter-bar .pub-filter,
+.show-more-btn,
+.theme-toggle-btn {
+    color: var(--body) !important;
+    text-shadow: none;
+    box-shadow: none;
+    max-width: none;
+    overflow: visible;
+}
+
+.pub-filter-bar .pub-filter:hover,
+.pub-filter-bar .pub-filter:active,
+.show-more-btn:active,
+.theme-toggle-btn:active {
+    background-color: transparent;
+    top: 0;
+}
+
+.pub-filter-bar .pub-filter:hover,
+.show-more-btn,
+.show-more-btn:hover,
+.theme-toggle-btn:hover {
+    color: var(--ink) !important;
+}
+
+.pub-filter-bar .pub-filter.is-active,
+.pub-filter-bar .pub-filter.is-active:hover {
+    background-color: var(--ink);
+    color: var(--bg, #fff) !important;
+}
+
+/* ---------- Hero tagline (research keywords under the name) ----------
+   Scoped under #top so vendor #top rules (e.g. "#top p") never win. */
+
+#top .hero-tagline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55em;
+    list-style: none;
+    margin: -0.25em 0 1.75em;
+    padding: 0;
+}
+
+#top .hero-tagline li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 0.45em 0.95em 0.45em 0.8em;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    white-space: nowrap;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#top .hero-tagline li:hover {
+    border-color: var(--accent);
+    background: var(--venue-bg);
+}
+
+#top .hero-tagline svg {
+    width: 1.1em;
+    height: 1.1em;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media screen and (max-width: 980px) {
+    #top .hero-tagline {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #top .hero-tagline {
+        gap: 0.45em;
+    }
+
+    #top .hero-tagline li {
+        font-size: 0.8em;
+    }
+}
+
+/* ---------- Section headers ---------- */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1em 1.5em;
+    margin-bottom: 2.25em;
+}
+
+.section-header .kicker {
+    display: block;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    font-size: 0.72em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5em;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+/* ---------- Shared "date + line" lists (News / Reviewer / Awards) ---------- */
+
+.entry-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.92em;
+    text-align: left;
+}
+
+.entry-list li {
+    padding: 0.45em 0;
+    line-height: 1.7em;
+}
+
+.entry-list li:first-child {
+    padding-top: 0;
+}
+
+.entry-list li:last-child {
+    padding-bottom: 0;
+}
+
+.entry-list .date {
+    display: inline-block;
+    min-width: 6.25em;
+    color: var(--accent);
+    margin-right: 0.25em;
+}
+
+/* Neutralize the vendor template's leftover boxed/oversized styling, and
+   size the dense conference/journal lists down a bit further than the
+   News/Awards entries. */
+#review-list {
+    background: none;
+    text-shadow: none;
+    font-size: 0.85em;
+}
+
+/* A little breathing room after the last entry, before the next section. */
+#news-list {
+    margin-bottom: 1em;
+}
+
+#awards-list {
+    margin-bottom: 2em;
+}
+
+/* One flat background across every section (News / Research Papers /
+   Interests / Reviewing / Awards) instead of the vendor template's
+   alternating tint. */
+.wrapper.style3 {
+    background-color: #fff;
+}
+
+/* Keep back-to-back sections (Interests / Reviewing / Awards) visually
+   distinct even though they share the same background. */
+.wrapper.style3 + .wrapper.style3 {
+    margin-top: 2.5em;
+    border-top: 1px solid var(--hairline);
+}
+
+.show-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25em;
+}
+
+.show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    width: auto;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--ink);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    padding: 0.6em 1.3em;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.show-more-btn svg {
+    width: 1em;
+    height: 1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.show-more-btn:hover {
+    background: var(--chip-bg);
+    border-color: var(--ink);
+}
+
+.news-item--hidden {
+    display: none;
+}
+
+/* ---------- Research Interests ---------- */
+
+.interest-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.92em;
+    text-align: left;
+}
+
+.interest-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4em 1.5em;
+    padding: 0.6em 0;
+}
+
+.interest-list li:first-child {
+    padding-top: 0;
+}
+
+.interest-list li:last-child {
+    padding-bottom: 0;
+}
+
+.interest-title {
+    font-family: "Source Serif 4", serif;
+    font-weight: normal;
+    color: var(--ink);
+    font-size: 1.02em;
+}
+
+.interest-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65em;
+    white-space: nowrap;
+}
+
+.interest-meta .venue,
+.pub-meta .venue {
+    display: inline-block;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    font-size: 0.82em;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: var(--venue-ink);
+    background: var(--venue-bg);
+    padding: 0.4em 0.7em;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+a.venue:hover {
+    color: var(--venue-ink) !important;
+    text-decoration: underline;
+}
+
+/* ---------- Research Papers ---------- */
+
+.pub-filter-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+    background: var(--chip-bg);
+    padding: 0.3em;
+    border-radius: 999px;
+    flex: 0 0 auto;
+}
+
+.pub-filter-bar .pub-filter {
+    width: auto;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--body);
+    padding: 0.5em 1.1em;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pub-filter-bar .pub-filter:hover {
+    color: var(--ink);
+}
+
+.pub-filter-bar .pub-filter.is-active {
+    background: var(--ink);
+}
+
+.pub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    font-size: 0.92em;
+    text-align: left;
+}
+
+.pub-entry {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.26s ease, transform 0.26s ease;
+}
+
+.pub-entry.pub-card--hidden {
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+}
+
+.pub-title {
+    font-size: 1.18em;
+    margin-bottom: 0.35em;
+    line-height: 1.4em;
+}
+
+.pub-authors {
+    color: var(--body);
+    font-size: 0.92em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+}
+
+.pub-authors .strong {
+    color: var(--ink);
+}
+
+.pub-footnote {
+    font-size: 0.75em;
+    color: var(--muted);
+    margin-top: 0.2em;
+    margin-bottom: 0;
+}
+
+.pub-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.65em;
+    margin-top: 0.65em;
+    margin-bottom: 0;
+}
+
+.pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 1;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    padding: 0.35em 0.75em;
+    border-radius: 999px;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.pub-link svg {
+    width: 1.1em;
+    height: 1.1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pub-link:hover {
+    color: var(--accent) !important;
+    border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pub-entry {
+        transition: none;
+    }
+}
+
+/* ---------- Status badges (shared: Publications + Research Interests) ---------- */
+
+.status-badge {
+    display: inline-block;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    font-size: 0.72em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.4em 0.75em;
+    border-radius: 999px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.status-badge--accepted {
+    color: var(--accepted);
+    background: rgba(46, 125, 70, 0.1);
+}
+
+.status-badge--submitted {
+    color: var(--submitted);
+    background: rgba(184, 134, 11, 0.12);
+}
+
+.status-badge--extra {
+    color: var(--extra);
+    background: rgba(184, 58, 75, 0.1);
+}
+
+/* ---------- Footer ---------- */
+
+.wrapper.style4 {
+    text-align: center;
+}
+
+/* ---------- Dark mode ("Lights off") ---------- */
+
+:root.dark-mode {
+    --ink: #EDEBE6;
+    --body: #B6B4AD;
+    --muted: #85837C;
+    --accent: #62B7EA;
+    --accepted: #4CAF6D;
+    --submitted: #E0A83B;
+    --extra: #E2727E;
+    --hairline: rgba(255, 255, 255, 0.09);
+    --border: rgba(255, 255, 255, 0.18);
+    --tint: #1a1a1a;
+    --chip-bg: #1f1f1f;
+    --bg: #121212;
+    --venue-ink: #8FD6F4;
+    --venue-bg: rgba(91, 195, 238, 0.14);
+}
+
+.dark-mode body {
+    background-color: #121212;
+}
+
+.dark-mode body,
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    color: var(--body);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode b,
+.dark-mode strong {
+    color: var(--ink);
+}
+
+.dark-mode #nav {
+    background-color: rgba(18, 18, 18, 0.92);
+}
+
+.dark-mode #nav a:hover {
+    background: #212121;
+    color: var(--ink) !important;
+}
+
+.dark-mode #nav a.nav-cv {
+    background: var(--ink);
+    color: #14141a !important;
+}
+
+.dark-mode #nav a.nav-cv:hover {
+    background: #d8d6d0;
+}
+
+.dark-mode .theme-toggle-btn:hover {
+    background: #212121;
+    color: var(--ink);
+}
+
+.dark-mode .wrapper.style1,
+.dark-mode .wrapper.style2,
+.dark-mode .wrapper.style3,
+.dark-mode .wrapper.review_style1,
+.dark-mode #review-list {
+    background-color: #121212;
+    text-shadow: none;
+}
+
+.dark-mode .wrapper.style4 {
+    background-color: #0c0c0c;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 736px) {
+
+    body {
+        padding-top: 3.1em;
+    }
+
+    #nav {
+        height: 3.1em;
+    }
+
+    #nav .nav-inner {
+        gap: 0.75em;
+    }
+
+    #nav .nav-right {
+        gap: 0.75em;
+    }
+
+    #nav .nav-brand {
+        font-size: 0.95em;
+    }
+
+    #nav a {
+        padding: 0.5em 0.6em;
+        font-size: 0.78em;
+    }
+
+    #nav a.nav-cv {
+        padding: 0.5em 0.75em;
+    }
+
+    .theme-toggle-btn {
+        padding: 0.5em 0.65em;
+        font-size: 0.78em;
+    }
+
+    .section-header {
+        align-items: flex-start;
+    }
+
+    .interest-list li,
+    .pub-meta {
+        gap: 0.4em 0.8em;
+    }
+
+    .pub-filter-bar .pub-filter,
+    .show-more-btn {
+        width: auto;
+        font-size: 0.85em;
+        padding: 0.55em 1em;
+    }
+}
+
+
+/* ---------- Hero (photo + intro) ---------- */
+
+#top .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 15em) minmax(0, 1fr);
+    gap: 3em;
+    align-items: start;
+}
+
+#top .hero-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 668 / 723;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 14px 34px -18px rgba(0, 0, 0, 0.45);
+}
+
+#top h1 {
+    margin: 0 0 0.25em;
+}
+
+#top .hero-role {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.02em;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 1.1em;
+}
+
+#top .hero-role a {
+    color: inherit;
+    border-bottom-color: transparent;
+}
+
+#top .hero-bio p {
+    font-size: 1em;
+    line-height: 1.75;
+    margin: 0 0 1em;
+    color: var(--body);
+}
+
+#top .hero-bio p a {
+    color: var(--venue-ink);
+}
+
+#top .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    margin: 1.4em 0 0;
+    padding: 0;
+}
+
+#top .hero-links li {
+    padding: 0;
+}
+
+#top .hero-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 0.95em;
+    border-radius: 8px;
+    background: var(--chip-bg);
+    border: 1px solid transparent;
+    color: var(--ink);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#top .hero-links a:hover {
+    border-color: var(--accent);
+    background: var(--venue-bg);
+    color: var(--ink) !important;
+}
+
+#top .hero-links .icon {
+    color: var(--accent);
+    font-size: 1.05em;
+}
+
+#top .hero-links .icon:before {
+    line-height: 1;
+}
+
+@media screen and (max-width: 980px) {
+    #top .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75em;
+        justify-items: center;
+    }
+
+    #top .hero-photo {
+        width: 13em;
+        max-width: 70%;
+    }
+
+    #top .hero-links,
+    #top .hero-tagline {
+        justify-content: center;
+    }
+
+    #top .hero-body {
+        width: 100%;
+    }
+
+    #top .hero-bio p {
+        text-align: left;
+    }
+}
+
+/* ---------- Research Interests (cards) ---------- */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17.5em, 1fr));
+    gap: 1.1em;
+    text-align: left;
+}
+
+.interest-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4em 1.4em 1.25em;
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    background: var(--bg);
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interest-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px -18px rgba(0, 0, 0, 0.45);
+}
+
+.interest-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 10px;
+    background: var(--venue-bg);
+    color: var(--accent);
+    margin-bottom: 0.9em;
+}
+
+.interest-icon svg {
+    width: 1.35em;
+    height: 1.35em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.interest-card .interest-card-title {
+    font-size: 1.05em;
+    line-height: 1.35;
+    margin: 0 0 0.5em;
+}
+
+.interest-card-text {
+    font-size: 0.88em;
+    line-height: 1.65;
+    margin: 0 0 1em;
+    flex: 1 1 auto;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tag-list li {
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    background: var(--chip-bg);
+    color: var(--body);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.72em;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .interest-card { transition: none; }
+    .interest-card:hover { transform: none; }
+}
+
+/* ---------- Publications: location next to venue ---------- */
+
+.pub-place {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.82em;
+    color: var(--muted);
+}
+
+/* ---------- Experience timeline ---------- */
+
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.4em;
+    border-left: 2px solid var(--hairline);
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 2.2em;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0.5em;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.4em - 6px);
+    top: 0.45em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+}
+
+.timeline-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25em 1.5em;
+}
+
+.timeline-head h3 {
+    font-size: 1.05em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.timeline-date {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.timeline-role {
+    font-style: italic;
+    font-size: 0.92em;
+    margin: 0.25em 0 0.6em;
+}
+
+.timeline-item ul {
+    list-style: disc;
+    margin: 0 0 0.6em;
+    padding-left: 1.2em;
+    font-size: 0.9em;
+    line-height: 1.65;
+}
+
+.timeline-item ul li {
+    padding: 0.15em 0;
+}
+
+.timeline-tools {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.8em;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* ---------- Education ---------- */
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    gap: 1.1em;
+    text-align: left;
+}
+
+.edu-card {
+    padding: 1.4em;
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    border-top: 3px solid var(--accent);
+}
+
+.edu-card h3 {
+    font-size: 1.05em;
+    line-height: 1.4;
+    margin: 0.5em 0 0.2em;
+}
+
+.edu-card p {
+    font-size: 0.88em;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.edu-card .edu-school {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.6em;
+}
+
+.coursework {
+    font-size: 0.86em;
+    line-height: 1.7;
+    margin: 1.5em 0 0;
+    text-align: left;
+}
+
+/* ---------- Skills ---------- */
+
+.skills {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.7em 2em;
+    margin: 0 0 2em;
+    font-size: 0.92em;
+    text-align: left;
+}
+
+.skills dt {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.skills dd {
+    margin: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .skills {
+        grid-template-columns: 1fr;
+        gap: 0.15em;
+    }
+
+    .skills dd {
+        margin-bottom: 0.7em;
+    }
+
+    .timeline {
+        padding-left: 1.1em;
+    }
+
+    .timeline-item::before {
+        left: calc(-1.1em - 6px);
+    }
+}
+
+.dark-mode .interest-card,
+.dark-mode .edu-card {
+    background: #161616;
+}

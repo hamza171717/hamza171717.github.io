@@ -1,0 +1,38 @@
+[
+  {
+    "icon": "surface",
+    "title": "Reconfigurable & Stacked Intelligent Metasurfaces",
+    "text": "RIS, STAR-RIS and stacked intelligent metasurfaces (SIM) for wave-domain beamforming, optimized jointly with the base-station transceiver.",
+    "tags": ["RIS", "STAR-RIS", "SIM", "Wave-domain beamforming"]
+  },
+  {
+    "icon": "antenna",
+    "title": "Multi-Antenna Systems & Multiple Access",
+    "text": "MIMO and MIMO-OFDM transceiver design and interference management with rate-splitting multiple access (RSMA), under sum-rate and max-min fairness objectives.",
+    "tags": ["MIMO", "RSMA", "Precoding", "Fairness"]
+  },
+  {
+    "icon": "optim",
+    "title": "Optimization for Wireless Networks",
+    "text": "Convex and non-convex optimization for resource allocation: successive convex approximation, block-coordinate gradient methods, and practical constraints such as amplifier nonlinearity.",
+    "tags": ["Convex optimization", "SCA", "Gradient methods"]
+  },
+  {
+    "icon": "signal",
+    "title": "5G/6G Physical Layer & URLLC",
+    "text": "3GPP-compliant link- and system-level modeling: 5G NR HARQ, configured-grant access, and latency analysis for safety-critical industrial IoT.",
+    "tags": ["5G NR", "URLLC", "3GPP", "Industrial IoT"]
+  },
+  {
+    "icon": "radar",
+    "title": "Integrated Sensing & Communication",
+    "text": "Joint beamforming that lets one network sense its environment while serving its users, with beampattern constraints alongside rate objectives.",
+    "tags": ["ISAC", "Beampattern design"]
+  },
+  {
+    "icon": "brain",
+    "title": "Deep Learning for Wireless",
+    "text": "Learning-based tools where they help the physical layer: uncertainty-aware continual learning for channel prediction in non-stationary channels, and generative AI for 6G.",
+    "tags": ["Channel prediction", "Continual learning", "Generative AI"]
+  }
+]

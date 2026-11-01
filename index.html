@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Muhammad Hamza Nawaz</title>
+    <meta name="author" content="Muhammad Hamza Nawaz"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (stored === 'dark' || (!stored && prefersDark)) {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <meta name="description" content="Muhammad Hamza Nawaz — M.S. student at Kyung Hee University working on wireless communications: intelligent metasurfaces, multi-antenna systems, optimization for 6G, and deep learning for the physical layer."/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+</head>
+<body class="is-preload">
+
+    <script src="assets/js/pub-utils.js"></script>
+    <script src="assets/js/list-render.js"></script>
+    <script src="assets/js/publications.js"></script>
+    <script src="assets/js/news.js"></script>
+    <script src="assets/js/interests.js"></script>
+    <script src="assets/js/review.js"></script>
+    <script src="assets/js/awards.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+
+<nav id="nav">
+    <div class="container nav-inner">
+        <a href="#top" class="nav-brand">M. Hamza Nawaz</a>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#top">About</a></li>
+                <li><a href="#interests">Research</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="assets/pdfs/cv.pdf" target="_blank" class="nav-cv">CV</a></li>
+            </ul>
+            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-pressed="false">
+                <span class="theme-toggle-icon" aria-hidden="true">&#127769;</span>
+                <span class="theme-toggle-label">Lights off</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<article id="top" class="wrapper style1">
+    <div class="container">
+        <div class="hero">
+            <div class="hero-photo">
+                <img src="assets/images/Website_Pic.jpeg" alt="Portrait of Muhammad Hamza Nawaz"/>
+            </div>
+            <div class="hero-body">
+                <header>
+                    <h1 class="strong">Muhammad Hamza Nawaz</h1>
+                    <p class="hero-role">
+                        M.S. Student &middot; Intelligent Communications Systems Lab &middot;
+                        <a href="https://www.khu.ac.kr/" target="_blank">Kyung Hee University</a>, Korea
+                    </p>
+                    <ul class="hero-tagline" aria-label="Research areas">
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12v9"/><circle cx="12" cy="10" r="1.6"/><path d="M8.5 6.5a5 5 0 0 0 0 7M15.5 6.5a5 5 0 0 1 0 7"/></svg>Wireless Communications</li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>Intelligent Metasurfaces</li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c3 0 4 14 9 14s6-14 9-14"/></svg>Optimization for 6G</li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="1.8"/><circle cx="6" cy="17" r="1.8"/><circle cx="18" cy="12" r="1.8"/><path d="M7.7 7.8l8.6 3.4M7.7 16.2l8.6-3.4"/></svg>Deep Learning for Wireless</li>
+                    </ul>
+                </header>
+
+                <div class="hero-bio">
+                    <p>
+                        I am a first-year M.S. student in Electronics &amp; Information Convergence Engineering at
+                        <a href="https://www.khu.ac.kr/" target="_blank">Kyung Hee University</a>, where I work as a
+                        graduate research assistant in the Intelligent Communications Systems Lab, advised by
+                        <a href="https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" target="_blank" style="white-space:nowrap">Prof. Yun Hee Kim</a>.
+                    </p>
+                    <p>
+                        My research is in <strong>wireless communications for next-generation networks</strong>.
+                        I design transceivers and resource-allocation schemes for multi-antenna systems using convex and
+                        non-convex optimization. Recent work covers stacked intelligent metasurfaces, STAR-RIS,
+                        rate-splitting multiple access, and integrated sensing and communication. I also use deep
+                        learning where it helps the physical layer, such as uncertainty-aware continual learning
+                        for MIMO-OFDM channel prediction.
+                    </p>
+                    <p>
+                        Before Kyung Hee, I earned my B.E. in Electrical Engineering from
+                        <a href="https://www.nust.edu.pk/" target="_blank">National University of Sciences &amp; Technology (NUST)</a>,
+                        Islamabad, advised by
+                        <a href="https://seecs.nust.edu.pk/faculty/ahmad-salman/" target="_blank" style="white-space:nowrap">Dr. Ahmad Salman</a>.
+                        I have since worked on funded research with the Universit&eacute; du Qu&eacute;bec &agrave; Trois-Rivi&egrave;res (Canada)
+                        and, on 5G URLLC for industrial IoT, with Mid Sweden University.
+                    </p>
+                </div>
+
+                <ul class="hero-links">
+                    <li><a href="mailto:mnawaz@khu.ac.kr"><span class="icon fa-light fa-envelope" aria-hidden="true"></span>mnawaz@khu.ac.kr</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=3ADEY5oAAAAJ&hl=en" target="_blank"><span class="icon ai ai-google-scholar" aria-hidden="true"></span>Google Scholar</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammadhamzanawaz/" target="_blank"><span class="icon fab fa-linkedin" aria-hidden="true"></span>LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza171717" target="_blank"><span class="icon fab fa-github" aria-hidden="true"></span>GitHub</a></li>
+                    <li><a href="assets/pdfs/cv.pdf" target="_blank"><span class="icon ai ai-cv" aria-hidden="true"></span>CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article id="interests" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">What I work on</span>
+          <h2>Research Interests</h2>
+        </div>
+      </header>
+      <!-- cards come from assets/data/research_interests.json via assets/js/interests.js -->
+      <div class="interest-grid" id="interest-grid"></div>
+    </div>
+</article>
+
+<article id="news" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Latest</span>
+          <h2>News</h2>
+        </div>
+      </header>
+      <!-- populated by assets/js/news.js (news.json + accepted papers) -->
+      <ul class="entry-list" id="news-list"></ul>
+    </div>
+</article>
+
+<article id="publications" class="wrapper style2">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Papers &amp; Chapters</span>
+          <h2>Publications</h2>
+        </div>
+        <div class="pub-filter-bar" id="toggle-pub-container">
+          <button type="button" class="pub-filter is-active" data-filter="all">All</button>
+          <button type="button" class="pub-filter" data-filter="representative">Selected</button>
+          <button type="button" class="pub-filter" data-filter="accepted">Accepted</button>
+          <button type="button" class="pub-filter" data-filter="submitted">Under Review</button>
+        </div>
+      </header>
+      <!-- populated by assets/js/publications.js -->
+      <div class="pub-list" id="pub-list"></div>
+    </div>
+</article>
+
+<article id="experience" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Research</span>
+          <h2>Experience</h2>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-head">
+            <h3>Intelligent Communications Systems Lab, Kyung Hee University</h3>
+            <span class="timeline-date">Mar 2026 &ndash; Present</span>
+          </div>
+          <p class="timeline-role">Graduate Research Assistant &middot; Intelligent Metasurface-Assisted Wireless Systems</p>
+          <ul>
+            <li>Proposed an RSMA-based, stacked-intelligent-metasurface-assisted downlink, optimized with block-coordinate gradient ascent: <strong>33% higher sum rate</strong> than the SDMA baseline while meeting the sensing beampattern constraint.</li>
+            <li>Extended it to a max-min fairness design, improving the minimum user rate by <strong>8%</strong> over SDMA.</li>
+            <li>Co-developed an SCA-based algorithm for RSMA with active STAR-RIS under nonlinear amplification: <strong>19% higher sum rate</strong> than SDMA.</li>
+          </ul>
+          <p class="timeline-tools">MATLAB &middot; CVX &middot; SCA &middot; Gradient-based &amp; non-linear optimization &middot; Wave-domain beamforming</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-head">
+            <h3>Laboratory of Signal and System Integration, Universit&eacute; du Qu&eacute;bec &agrave; Trois-Rivi&egrave;res</h3>
+            <span class="timeline-date">May 2025 &ndash; Dec 2025</span>
+          </div>
+          <p class="timeline-role">Research Assistant &middot; Continual Learning for MIMO-OFDM Channel Prediction</p>
+          <ul>
+            <li>Generated a 3GPP TR 38.901 CDL-D 8&times;2 MIMO-OFDM CSI dataset with Doppler-induced channel aging to emulate non-stationary channels.</li>
+            <li>Built an LSTM channel predictor with Monte-Carlo dropout for uncertainty estimation, trained with a heteroscedastic uncertainty-weighted loss.</li>
+            <li>Proposed uncertainty-weighted experience replay with LARS buffer replacement, keeping per-RB NMSE flat with replay memory <strong>under 5% of the dataset</strong>.</li>
+          </ul>
+          <p class="timeline-tools">Python &middot; PyTorch &middot; MATLAB 5G Toolbox &middot; 3GPP TR 38.901</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-head">
+            <h3>Information Processing and Transmission Lab, NUST</h3>
+            <span class="timeline-date">May 2024 &ndash; Dec 2024</span>
+          </div>
+          <p class="timeline-role">Research Assistant &middot; Safety-Critical 5G URLLC for Industrial IoT</p>
+          <ul>
+            <li>Modeled a 5G NR industrial uplink with configured-grant routine traffic and slot-level preemptive access for safety-critical devices, with Mid Sweden University and Manchester Metropolitan University.</li>
+            <li>Derived a closed-form end-to-end safety response time model (IEC 61784-3-3) linking HARQ retransmissions, BLER, and slot alignment to system-level delay.</li>
+            <li>Implemented custom HARQ entities in the MATLAB 5G Toolbox, showing <strong>over 50% lower response time</strong> as subcarrier spacing grows from 15 to 60 kHz.</li>
+          </ul>
+          <p class="timeline-tools">MATLAB 5G Toolbox &middot; 3GPP NR PHY/MAC &middot; HARQ &middot; Stochastic modeling</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-head">
+            <h3>Optimization and Machine Learning (OPTIMAL) Lab, NUST</h3>
+            <span class="timeline-date">May 2023 &ndash; May 2024</span>
+          </div>
+          <p class="timeline-role">Research Assistant &middot; Deep Learning for Signal Denoising and Classification</p>
+          <ul>
+            <li>Designed a lightweight 1D CNN on Mel-spectrograms for 7-class lung-sound classification, reaching <strong>99.9% accuracy</strong> on ICBHI 2017.</li>
+            <li>Built a U-Net-style denoising autoencoder with STFT spectral masking and transfer learning, reaching 95.5% accuracy in a real-time mobile pipeline.</li>
+            <li>Proposed a GAN with spatial-channel attention for denoising: 2&nbsp;dB higher PSNR with 2M fewer parameters.</li>
+          </ul>
+          <p class="timeline-tools">Python &middot; CNNs &middot; Autoencoders &middot; GANs &middot; STFT</p>
+        </li>
+      </ol>
+    </div>
+</article>
+
+<article id="education" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Degrees</span>
+          <h2>Education</h2>
+        </div>
+      </header>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <span class="timeline-date">Mar 2026 &ndash; Present</span>
+          <h3>M.S., Electronics &amp; Information Convergence Engineering</h3>
+          <p class="edu-school">Kyung Hee University &middot; Yongin, Korea</p>
+          <p>Thesis area: stacked intelligent metasurface-assisted wireless systems<br/>
+             Advisor: <a href="https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" target="_blank">Prof. Yun Hee Kim</a> &middot; CGPA 4.3/4.3</p>
+        </div>
+        <div class="edu-card">
+          <span class="timeline-date">Oct 2020 &ndash; Jul 2024</span>
+          <h3>B.E., Electrical Engineering</h3>
+          <p class="edu-school">National University of Sciences &amp; Technology (NUST) &middot; Islamabad, Pakistan</p>
+          <p>Final-year project: low-complexity deep learning for breathing-signal classification<br/>
+             Advisor: <a href="https://seecs.nust.edu.pk/faculty/ahmad-salman/" target="_blank">Dr. Ahmad Salman</a> &middot; CGPA 3.32/4</p>
+        </div>
+      </div>
+      <p class="coursework"><strong>Relevant coursework:</strong> Optimization Theory, Mathematics for Communications, Mobile Communication Systems,
+        Communication Systems, Digital Signal Processing, Signals and Systems, Electromagnetic Field Theory,
+        Computer &amp; Communication Networks, Machine Learning, Computer Vision.</p>
+    </div>
+</article>
+
+<article id="awards" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Honors</span>
+          <h2>Awards &amp; Scholarships</h2>
+        </div>
+      </header>
+      <!-- populated by assets/js/awards.js -->
+      <ul class="entry-list" id="awards-list"></ul>
+    </div>
+</article>
+
+<article id="service" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Community</span>
+          <h2>Service &amp; Teaching</h2>
+        </div>
+      </header>
+      <!-- populated by assets/js/review.js -->
+      <ul class="entry-list" id="review-list"></ul>
+    </div>
+</article>
+
+<article id="skills" class="wrapper style3">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <span class="kicker">Toolbox</span>
+          <h2>Skills</h2>
+        </div>
+      </header>
+      <dl class="skills">
+        <dt>Wireless</dt><dd>Sionna, MATLAB 5G Toolbox, NYUSIM, QuaDRiGa, 3GPP channel models</dd>
+        <dt>Optimization</dt><dd>CVX, successive convex approximation, gradient-based and non-linear optimization</dd>
+        <dt>Deep learning</dt><dd>PyTorch, TensorFlow, CNNs, LSTMs, GANs, autoencoders, attention networks</dd>
+        <dt>Programming</dt><dd>Python, MATLAB, C/C++, LaTeX</dd>
+        <dt>Data</dt><dd>NumPy, SciPy, Pandas, Matplotlib</dd>
+      </dl>
+    </div>
+</article>
+
+<article class="wrapper style4">
+    <div class="container medium">
+        <footer>
+            <ul id="copyright">
+                <li>&copy; 2026 Muhammad Hamza Nawaz</li>
+            </ul>
+        </footer>
+    </div>
+</article>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
