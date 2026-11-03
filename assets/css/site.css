@@ -1113,3 +1113,17 @@ a.venue:hover {
 .dark-mode .edu-card {
     background: #161616;
 }
+
+/* Visitor map (MapMyVisitors widget) */
+.visitor-map {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+.visitor-map canvas,
+.visitor-map img,
+.visitor-map iframe {
+    max-width: 100%;
+    height: auto;
+}
