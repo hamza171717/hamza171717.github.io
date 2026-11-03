@@ -1115,11 +1115,21 @@ a.venue:hover {
 }
 
 /* Visitor map (MapMyVisitors widget) */
+.visitors-mini {
+    padding-top: 1.5em !important;
+    padding-bottom: 1.5em !important;
+    text-align: center;
+}
+.visitors-mini .kicker {
+    display: block;
+    margin-bottom: 0.6em;
+}
 .visitor-map {
-    display: flex;
-    justify-content: center;
+    width: 280px;
     max-width: 100%;
+    margin: 0 auto;
     overflow: hidden;
+    border-radius: 8px;
 }
 .visitor-map canvas,
 .visitor-map img,
