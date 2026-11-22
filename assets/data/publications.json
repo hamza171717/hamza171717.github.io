@@ -52,6 +52,21 @@
   {
     "selected": true,
     "details": {
+      "title": "Rate Splitting Multiple Access for Stacked Intelligent Metasurface-enabled Communication Systems",
+      "authors": [
+        { "name": "J. Ahmad",     "href": "" },
+        { "name": "M. H. Nawaz",  "href": "", "strong": true },
+        { "name": "Y. H. Kim",    "href": "https://scholar.google.com/citations?user=O7rpQvAAAAAJ&hl=en" }
+      ],
+      "venue": "KICS Summer Conference'26",
+      "status": "accepted",
+      "badges": ["Best Paper Award"],
+      "links": []
+    }
+  },
+  {
+    "selected": true,
+    "details": {
       "title": "Active STAR-RIS Empowered ISAC with RSMA Under Nonlinear Amplification",
       "authors": [
         { "name": "N. Khan",      "href": "" },
